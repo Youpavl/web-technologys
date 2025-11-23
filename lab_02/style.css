@@ -1,0 +1,62 @@
+/*--------Default--------*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+body{
+    background-color: rgb(255, 255, 255);
+    padding: 50px 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h1.todo_maintext{
+    margin-bottom: 15px;
+}
+
+.todo_section{
+    margin: auto;
+    max-width: 330px;
+}
+
+ul.todo_list {
+    
+}
+
+.todo_list .item:nth-child(even){
+    background-color: rgb(139, 206, 224);
+}
+
+.todo_list .item:nth-child(odd){
+    background-color: #71b7c7;
+}
+
+.item {
+    padding: 10px 15px;
+}
+
+.item :first-child{
+    margin-right: 10px;
+}
+
+.item :last-child{
+    margin-left: 10px;
+}
+
+.item {
+    list-style-type: none;
+}
+
+.done{
+    background-color: #d1d1d1 !important;
+}
+.cross{
+    color: rgb(255, 0, 0);
+    font-weight: 10000;
+}
