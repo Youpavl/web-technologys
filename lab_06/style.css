@@ -1,0 +1,87 @@
+/*--------Default--------*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color:#ffffff;
+    padding: 50px 10px;
+    box-sizing: border-box;
+    text-align:в center;
+}
+
+.reload-form {
+    min-width: 200px;
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.reload-form__message {
+    font-size: 22px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.reload-form__block{
+    width: 100%;
+    height: 50px;
+    border: 5px solid #3685bd;
+    border-radius: 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.reload-form__block::before{
+    content: '';
+    background: #3685bd;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation: reloadline 2s linear 0.5ms infinite forwards;
+}
+
+@keyframes reloadline {
+    0% {
+        width: 0%;
+        left: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        opacity: 0.2;
+    }
+    10% {opacity: 1;}
+    30% {
+        width: 40%;
+        left: 0;
+    }
+    50% {
+        width: 40%;
+        left: 25%;
+    }
+    75% {
+        width: 40%;
+        left: 60%;
+    }
+    90% {opacity: 1;}
+
+    100% {
+        width: 0%;
+        left: 100%;
+        opacity: 0.2;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px; 
+    }
+}
+
+.autorisatio-process{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
