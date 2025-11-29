@@ -1,0 +1,125 @@
+/*--------Default--------*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color:#ffffff;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gallary {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #000;
+}
+
+.gallary__main-info {
+    margin-bottom: 20px;
+}
+
+.gallary__main-info >* {
+    margin-bottom: 5px;
+}
+
+.gallary__items {
+    width: 100%;
+    padding: 15px 15px;
+    position: relative;
+}
+
+.gallary__items::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 45px;
+    height: 4px;
+    display: block;
+    background-color: #a7a7a7;
+}
+
+.gallary__item {
+    float: left;
+    width: 32%;
+    margin: 0px 2% 30px 0;
+}
+
+.gallary__item:nth-child(3n){
+    margin-right: 0;
+}
+
+.gallary__item:nth-child(3n+1) {
+    clear: left;
+}
+
+.item__img img{
+    width: 100%;
+    filter: grayscale(1);
+    display: block;
+    transition: filter 0.4s;
+    position: relative;
+}
+
+.item__img img:hover {
+    filter: grayscale(0);
+    bottom: 5px;
+}
+
+.gallary__item h3 {
+    text-transform: uppercase;
+}
+
+@media (max-width: 940px) {
+    .gallary__item{
+        width: 48%;
+        margin-right: 4%;
+    }
+    .gallary__item:last-child{
+        width: 100%;
+    }
+    .gallary__item:nth-child(3n){
+        margin-right: 4%;
+    }
+
+    .gallary__item:nth-child(3n+1){
+        clear: none;
+    }
+
+    .gallary__item:nth-child(2n){
+        margin-right: 0;
+    }
+    .gallary__item:nth-child(2n+1){
+        clear: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallary__items {
+        padding: 0;
+    }
+    .gallary__item{
+        width: 100%;
+        margin: 10px 0;
+    }
+    h3,
+    p {
+        font-size: 20px;
+    }
+    .gallary__item{
+        margin-right: 0;
+    }
+    .gallary__item:nth-child(2n+1){
+        clear: none;
+    }
+    .gallary__items::before {
+        content: "";
+        left: 0;
+    }
+}
