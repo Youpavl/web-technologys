@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №3,4 (Lab11)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+
+    <h3 class="mb-3">Завдання №3. Модальне вікно Bootstrap</h3>
+
+    <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#formModal">
+        Увійти
+    </button>
+
+    <div class="modal fade" id="formModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Форма авторизації</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email адреса</label>
+                            <input type="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Пароль</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
+                    <button type="button" class="btn btn-success">Увійти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h3 class="mb-3">Завдання №4. Панель із вкладками Bootstrap</h3>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+                role="tab">Важливе</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                role="tab">Інформація</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+                role="tab">Додатково</button>
+        </li>
+    </ul>
+
+    <div class="tab-content p-3 border border-top-0" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quos ad laboriosam rem voluptas mollitia
+                dicta perspiciatis dolore molestiae asperiores tenetur sequi consequuntur nihil voluptate, nam error
+                enim illo fuga non dignissimos earum. Facere tempora aspernatur enim delectus amet suscipit earum
+                numquam dolor atque. Nostrum itaque impedit laborum aut doloremque fuga voluptas nam expedita sit? Sit
+                cupiditate porro, deserunt eligendi magnam nostrum nulla accusantium explicabo. Odit adipisci quis
+                reprehenderit doloremque cumque dolorum blanditiis libero soluta rerum, rem laborum, sequi dolor velit
+                ullam beatae saepe illo fugit maxime cupiditate deserunt sunt laudantium esse sint nemo. Enim libero
+                ipsa eaque nemo odit!</p>
+        </div>
+        <div class="tab-pane fade" id="tab2" role="tabpanel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum totam ipsam voluptatum fuga eaque. Error
+                quam totam eius sint quibusdam corporis nihil rerum animi, numquam vel est atque placeat libero ipsa
+                laborum, maiores qui veritatis odit esse voluptas cum earum amet tempore nisi! Est quaerat, possimus
+                temporibus ducimus at minima eligendi explicabo hic ea assumenda deserunt dolore architecto pariatur
+                dolorum reiciendis eveniet maxime quibusdam voluptatibus nemo odit labore. Commodi libero sed nostrum
+                vitae officia saepe numquam, architecto repellat veritatis vel error temporibus eos? Odit dignissimos
+                voluptatum eligendi asperiores, neque atque pariatur praesentium sint ducimus, ipsa repudiandae
+                voluptatem maiores. Facilis sequi qui numquam beatae quis illum eum fugiat quam magni sunt. Odio odit
+                debitis perferendis saepe unde tempora vel, fugit, provident facilis vitae eaque officia libero
+                dignissimos magni dolore? Rerum error quasi iste! Necessitatibus, quaerat velit. Sit, dolor consectetur,
+                nam ab ut consequuntur amet modi, perspiciatis eligendi eaque ducimus eveniet. Consequatur, cumque quis
+                repellendus dolorum sapiente minima temporibus doloremque impedit, necessitatibus beatae soluta fugiat
+                architecto sequi doloribus cupiditate quae aperiam magni vero! Quibusdam placeat minima reprehenderit
+                obcaecati itaque quod aut soluta doloremque, sapiente dolores illum non temporibus. Eaque aspernatur
+                voluptas, optio facilis voluptate quos dignissimos, iste cum molestiae quisquam architecto, in mollitia
+                ipsum delectus quas aliquid impedit laboriosam fugit quasi tenetur? Itaque rem quaerat neque obcaecati,
+                nemo ab sed est, dolore nisi cumque voluptatum nesciunt, perspiciatis a provident debitis sunt
+                distinctio aliquid assumenda quae eos ad voluptatem ullam nulla. Error, harum ratione autem explicabo
+                quibusdam voluptate. Officiis deserunt eos voluptatem nesciunt.</p>
+        </div>
+        <div class="tab-pane fade" id="tab3" role="tabpanel">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa esse ipsa qui temporibus
+                consectetur enim aut nisi quas quia nesciunt officia incidunt ipsam nostrum consequatur veniam ad
+                voluptatibus error perspiciatis eos, illum quam voluptatem distinctio minus! Repudiandae hic asperiores
+                quasi adipisci inventore dolore. Ipsam saepe, perspiciatis hic ut nemo numquam veniam voluptate at quam
+                natus fugiat?</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
