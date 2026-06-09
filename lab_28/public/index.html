@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab28:   JWT, Express & MongoDB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>JWT</h1>
+        <div id="header-user" class="header-user hidden">
+            <span id="header-name"></span>
+            <span id="header-role" class="badge"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div id="view-guest" class="container">
+        <div class="grid">
+
+            <div class="card">
+                <h2>Sign Up</h2>
+                <form onsubmit="register(event)">
+                    <label>Name</label>
+                    <input type="text" id="regName" placeholder="Your name" required>
+                    <label>Email</label>
+                    <input type="email" id="regEmail" placeholder="email@example.com" required>
+                    <label>Password</label>
+                    <input type="password" id="regPassword" placeholder="Enter password" required>
+                    <label>Confirm Password</label>
+                    <input type="password" id="regPasswordConfirm" placeholder="Repeat password" required>
+                    <label>Role</label>
+                    <select id="regRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <button type="submit" class="btn btn-blue">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Login</h2>
+                <form onsubmit="login(event)">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="email@example.com" required>
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password" required>
+                    <button type="submit" class="btn btn-green">Login</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="view-user" class="container hidden">
+
+        <div class="card">
+            <h2>Profile</h2>
+            <table class="info-table">
+                <tr><td>Name:</td><td id="profile-name">—</td></tr>
+                <tr><td>Email:</td><td id="profile-email">—</td></tr>
+                <tr><td>Role:</td><td id="profile-role">—</td></tr>
+            </table>
+            <div class="btn-row">
+                <button onclick="getUserInfo()" class="btn btn-blue">Update Info</button>
+                <button onclick="refreshToken()" class="btn btn-outline">Refresh Token</button>
+                <button onclick="logout()" class="btn btn-red">Logout</button>
+            </div>
+        </div>
+
+        <div id="admin-panel" class="card hidden">
+            <h2>Admin Panel</h2>
+            <p class="muted">Access only for administrators</p>
+            <button onclick="getAdminInfo()" class="btn btn-orange">Get Admin Data</button>
+            <pre id="admin-data" class="hidden"></pre>
+        </div>
+
+    </div>
+
+    <div id="msg"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
