@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: #ededed;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "reg pers"
+        "chk pers";
+    column-gap: 50px;
+    row-gap: 10px;
+    padding: 40px 50px;
+}
+
+.reg-section {
+    grid-area: reg;
+}
+
+.pers-section {
+    grid-area: pers;
+}
+
+.check-section {
+    grid-area: chk;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.input-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.icon-spacer {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    flex: 1;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background-color: transparent;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-bottom: 2px solid #555;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #222;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.form-footer {
+    background-color: #e2e2e2;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #d5d5d5;
+}
+
+.submit-btn {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.submit-btn:hover {
+    background-color: #006666;
+}
+
+@media (max-width: 900px) {
+    .form-body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "reg"
+            "pers"
+            "chk";
+        padding: 30px 40px;
+        row-gap: 20px;
+    }
+
+    .pers-section h3 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-body {
+        padding: 20px 25px;
+    }
+
+    .form-footer {
+        padding: 20px 25px;
+    }
+}

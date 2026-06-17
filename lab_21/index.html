@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab21. Local Storage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="logo">eShop</h1>
+        <button id="openModalBtn" class="action-btn">create Product</button>
+    </header>
+
+    <main id="productsList" class="products-grid">
+    </main>
+
+    <div id="productModal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-icon">&times;</span>
+            <h2>Create product</h2>
+
+            <form id="productForm">
+                <div class="form-group">
+                    <label>Title:</label>
+                    <input type="text" id="prodTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Description:</label>
+                    <textarea id="prodDesc" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Price:</label>
+                    <input type="number" id="prodPrice" min="0" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Discount:</label>
+                    <input type="number" id="prodDiscount" min="0" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label>In stock:</label>
+                    <input type="number" id="prodStock" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label>Brand:</label>
+                    <input type="text" id="prodBrand">
+                </div>
+
+                <div class="form-group">
+                    <label>Category:</label>
+                    <select id="prodCategory" required>
+                        <option value="">Choose category...</option>
+                        <option value="smartphones">Smartphones</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="fragrances">Fragrances</option>
+                        <option value="skincare">Skincare</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Link to picture (URL):</label>
+                    <input type="url" id="prodImage" required>
+                </div>
+
+                <button type="submit" class="save-btn">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

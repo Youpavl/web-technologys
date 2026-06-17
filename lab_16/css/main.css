@@ -1,0 +1,26 @@
+.box {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #56819d;
+    color: white;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.normal-box {
+    background-color: #2bb069;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #5135ee;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
