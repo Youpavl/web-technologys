@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+  margin: 30px;
+  font-family: "Poppins";
+}
+
+.grid-container{
+    background-color: #eee;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    /* ex_1 */
+    /* grid-template-columns: 300px 300px 300px; */
+    
+    /* ex_2 */
+    /* grid-template-columns: repeat(3, 300px); */
+
+    /* ex_3 */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+    /* ex_4 */
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    /* ex_5 */
+    /* grid-template-columns: repeat(2, 1fr 2fr); */
+
+    grid-template-columns: repeat(6, 1fr);
+    /* ex_8 */
+    grid-template-rows: 100px 400px 100px;
+    gap: 10px; 
+    /* Show in browser GAPs*/
+
+    /* ex_9 */
+    justify-items: end;
+    justify-items: center;
+    justify-items: start;
+    /* by default */
+    justify-items: stretch;
+}
+
+.grid-container > div {
+    background-color: #ccc;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #777;
+}
+
+.grid-container > div:nth-child(1) {
+    /* ex_6 */
+    /* grid-column: 1 / 3; */
+    /* the same as */
+    grid-column: 1 / span 2;
+}
+
+.grid-container > div:nth-child(2) {
+     /* ex_7 */
+    grid-column: span 4;
+}
+
+.grid-container > div:nth-child(3) {
+    /* ex_7 */
+   grid-column: 2 / span 4;
+   /* height: 200px; */
+
+
+    /* ex_10 */
+    align-self: end;
+    align-self: stretch;
+}
+
+.grid-container > div:nth-child(4) {
+    /* ex_7 */
+   grid-column: 1 / 7;
+}
+
+.grid-container > div:nth-child(5) {
+    /* ex_7 */
+   grid-column: span 3;
+}
+
+.grid-container > div:nth-child(6) {
+    /* ex_7 */
+   grid-column: span 3;
+
+  /* ex_11 */
+  justify-self: end;
+  
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Practice Landing Page</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Стиль називання класів із використанням подвійних нижніх підкреслень (__) 
+     називається BEM (Block, Element, Modifier). 
+    Це методологія для створення зрозумілих і масштабованих CSS-класів. 
+    - Block (Блок) — автономний компонент інтерфейсу, наприклад: <div class="header"></div>
+    - Element (Елемент) — частина блоку, яка не може існувати поза ним. 
+        для елемента використовується подвійне підкреслення (__): <div class="header">
+                                                                        <nav class="header__nav"></nav>
+                                                                    </div>
+    - Modifier (Модифікатор) — стан або варіант блоку чи елемента. 
+        Для модифікатора використовується одинарне підкреслення (_)
+                                                <div class="header header_dark">
+                                                    <nav class="header__nav header__nav_active"></nav>
+                                                </div>
+    -->
+
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo">Logo</div>
+            <ul class="header__menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero__title">Welcome to Our Landing Page</h1>
+        <p class="hero__description">Practice SCSS with a real-world example!</p>
+        <button class="hero__button">Learn More</button>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="services__title">Our Services</h2>
+            <div class="services__list">
+                <div class="service">
+                    <h3 class="service__title">Web Development</h3>
+                    <p class="service__description">We create responsive and modern websites.</p>
+                </div>
+                <div class="service">
+                    <h3 class="service__title">UI/UX Design</h3>
+                    <p class="service__description">Beautiful designs that are user-friendly.</p>
+                </div>
+                <div class="service">
+                    <h3 class="service__title">SEO Optimization</h3>
+                    <p class="service__description">Improve your website's visibility online.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 SCSS Practice Landing Page. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

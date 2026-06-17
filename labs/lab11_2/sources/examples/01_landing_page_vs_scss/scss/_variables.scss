@@ -1,0 +1,20 @@
+// Кольори
+$primary-color: #3498db;
+$secondary-color: #2c528b;
+$text-color: #333;
+$background-color: #f5f5f5;
+
+// Шрифти
+$font-family: 'Arial', sans-serif;
+
+// Розміри
+$container-width: 1200px;
+$gutter: 20px;
+
+// Точки перелому (Maps)
+$breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+ul, li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 30px;
+}
+
+header {
+    grid-column: span 3;
+    /* justify-items: end; */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    padding: 30px;
+    border-right: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+nav p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav li {
+    text-decoration: underline;
+}
+
+article {
+    padding: 30px;
+}
+
+article h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+article img{
+    width: 100%;
+}
+
+article p {
+    margin-top: 30px;
+    line-height: 2em;
+    color: #777;
+}
+
+aside {
+    padding: 30px;
+    border-left: 1px solid #ddd;
+}
+
+footer {
+    grid-column: span 3;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+    /* Розтягуємо навігаційне меню на всі колонки */
+    nav {
+        grid-column: span 3;
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+    /* Кажемо, що <p>Categories:</p> буде займати 6 колонок */
+    nav p {
+        grid-column: span 6;
+    }
+
+    /* Робимо грідом список ul */
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr );
+        column-gap: 10px;
+        align-items: center;
+    }
+    
+    /* Розширяємо на одну колонку article */
+    article {
+        grid-column: span 2;
+    }
+    /* Зменшуємо падінги */
+    aside {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    /* Розширяємо кожен блок на 3 колонки (на всю ширину) */
+    nav, article, aside {
+        grid-column: span 3;
+    }
+
+   /* На кожен пункт списку виділяємо мінімум 150px або більше, 
+   якщо менше - переносяться в наступний рядок*/
+
+    nav ul {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) 
+    }
+
+    /* Перекроюємо aside */
+    aside ul {
+        display: grid;
+        text-align: center;
+        
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}

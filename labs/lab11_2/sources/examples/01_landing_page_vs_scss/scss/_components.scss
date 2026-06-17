@@ -1,0 +1,62 @@
+// Імпорт файлів
+@use "variables" as *;
+@use "mixins" as *;
+
+// Загальні стилі для компонентів
+.header {
+    background-color: $primary-color;
+    color: white;
+    
+    &__logo {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    &__nav {
+        @include flex-center;
+        justify-content: space-between;
+        padding: $gutter;
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+
+        li {
+            margin: 0 $gutter;
+
+            a {
+                color: white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+    color: white;
+
+    &__title {
+        font-size: 2.5rem;
+    }
+
+    &__button {
+        background-color: $secondary-color;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}

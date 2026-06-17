@@ -1,0 +1,65 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.header {
+    background-color: $color-primary;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 30px;
+
+        a {
+            font-weight: 500;
+            color: white;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+
+        @include respond-to("sm") {
+            display: none;
+        }
+    }
+}
+
+%btn-shared {
+    display: inline-block;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: $color-primary;
+    color: white;
+
+    &:hover {
+        background-color: $color-hover;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+}
+
+.btn--primary,
+.hero__button {
+    @extend %btn-shared;
+}
